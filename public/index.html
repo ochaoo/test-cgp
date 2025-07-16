@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Users & Images</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: auto;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #aaa;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+      th {
+        background-color: #f0f0f0;
+      }
+      form {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Users List (Top 100 by Images)</h1>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Images Count</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="pagination"></div>
+
+    <h2>Create New User</h2>
+    <form id="userForm" enctype="multipart/form-data">
+      <label>
+        Name:
+        <input type="text" name="name" required /> </label
+      ><br /><br />
+      <label>
+        City:
+        <input type="text" name="city" required /> </label
+      ><br /><br />
+      <label>
+        Image:
+        <input type="file" name="image" accept=".jpg,.jpeg,.png" required /> </label
+      ><br /><br />
+      <button type="submit">Create</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

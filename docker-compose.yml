@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: usersdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: postgres
+      DB_PASS: postgres
+      DB_NAME: usersdb
+      DB_DIALECT: postgres
+      NODE_ENV: development
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "node index.js"
+
+volumes:
+  pgdata:
