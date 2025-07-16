@@ -2,7 +2,7 @@
 
 Simple CRUD project on Node.js + Express + Sequelize + PostgreSQL with image upload support and HTML/JS frontend.
 
-## 📋 Предварительные требования
+## 📋 Prerequisites
 
 - Docker & Docker Compose
 - Git
