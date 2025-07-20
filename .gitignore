@@ -1,3 +1,4 @@
 /node_modules
-.gitignor
+.gitignore
 package-lock.json
+/uploads
